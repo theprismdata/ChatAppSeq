@@ -10,6 +10,8 @@ npm install redux
 
 npm install react-redux
 
-npm install -D tailwindcss postcss autoprefixer
+npm install -D tailwindcss@3.4.17 postcss autoprefixer
+
+npx tailwindcss init -p
 
 npm run dev
