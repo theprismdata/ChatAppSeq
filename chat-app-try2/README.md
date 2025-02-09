@@ -1,8 +1,15 @@
-# React + Vite
+## 코딩하는 나무늘보
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### OpenAry Web Client
 
-Currently, two official plugins are available:
+### Backend api는 https://github.com/theprismdata/OpenAry-RAG-Docker 를 참조하세요.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+git clone https://github.com/theprismdata/ChatAppSeq/tree/main/chat-app-try2
+
+npm install redux
+
+npm install react-redux
+
+npm install -D tailwindcss postcss autoprefixer
+
+npm run dev
