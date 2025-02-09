@@ -53,10 +53,10 @@ export default function LoginForm() {
             />
           </div>
           <h2 className="text-3xl font-bold text-gray-800 mb-2">
-            Welcome Back!
+            OpenAry~ 자료를 찾아줘
           </h2>
           <p className="text-sm text-gray-600">
-            코딩하는 나무늘보와 함께 시작하세요
+            나무늘보와 함께 지식을 검색해봐요.
           </p>
         </div>
 

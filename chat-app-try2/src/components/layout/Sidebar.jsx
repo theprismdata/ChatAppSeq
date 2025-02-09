@@ -9,7 +9,7 @@ export default function Sidebar() {
   return (
     <div className="w-64 bg-gray-800 text-white p-4">
       <div className="mb-8">
-        <h1 className="text-xl font-bold">Chat Application</h1>
+        <h1 className="text-xl font-bold">OpenAry</h1>
       </div>
       <div className="mb-4">
         <p className="text-sm text-gray-400">로그인 사용자:</p>
