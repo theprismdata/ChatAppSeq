@@ -2,10 +2,24 @@ import React from "react";
 
 export default function ChatMessage({
   type,
-  content,
+  content = "", // Add default empty string
   sources = [],
   searchResults = [],
 }) {
+  const processMarkdown = (text) => {
+    if (!text) return ""; // Return empty string if text is null or undefined
+
+    return text
+      .replace(/\n/g, "<br>")
+      .replace(
+        /\|([^|]+)\|([^|]+)\|/g,
+        "<table><tr><td>$1</td><td>$2</td></tr></table>"
+      )
+      .replace(/`([^`]+)`/g, "<code>$1</code>")
+      .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
+      .replace(/\*([^*]+)\*/g, "<em>$1</em>");
+  };
+
   return (
     <div className={`mb-4 ${type === "user" ? "text-right" : "text-left"}`}>
       <div
@@ -15,9 +29,15 @@ export default function ChatMessage({
             : "bg-gray-100 text-gray-800"
         }`}
       >
-        <p>{content}</p>
+        <div className="prose dark:prose-invert max-w-none">
+          <div
+            dangerouslySetInnerHTML={{
+              __html: processMarkdown(content),
+            }}
+          />
+        </div>
       </div>
-      {type === "bot" && sources.length > 0 && (
+      {type === "bot" && sources?.length > 0 && (
         <div className="mt-2 text-sm text-gray-600">
           <p className="font-semibold">참고 문서:</p>
           <ul className="list-disc list-inside">
@@ -27,7 +47,7 @@ export default function ChatMessage({
           </ul>
         </div>
       )}
-      {type === "bot" && searchResults.length > 0 && (
+      {type === "bot" && searchResults?.length > 0 && (
         <div className="mt-2 text-sm text-gray-600">
           <p className="font-semibold">관련 검색:</p>
           <ul className="list-disc list-inside">
