@@ -1,0 +1,19 @@
+# dependencies
+/.pnp
+.pnp.js
+
+/SmallChatApp/node_modules
+
+.DS_Store
+SmallChatApp/.env
+
+SmallChatApp/npm-debug.log*
+SmallChatApp/yarn-debug.log*
+SmallChatApp/yarn-error.log*
+SmallChatApp/.vscode/
+
+/chat-app-try2/node_modules
+
+.DS_Store
+chat-app-try2/.env
+chat-app-try2/.vscode/

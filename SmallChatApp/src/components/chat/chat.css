@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .sidebar {
+    width: 25%;
+    border-right: 1px solid #ccc;
+  }
+  
+  .main {
+    width: 75%;
+  }
